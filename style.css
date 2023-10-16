@@ -20,7 +20,7 @@ hr {
   margin: 0 auto;
   background-color: white;
   border-radius: 20px;
-  border-bottom-right-radius: 50px;
+  border-bottom-right-radius: 205px;
   padding: 2%;
 }
 
@@ -68,4 +68,8 @@ button:hover, button:focus {
 }
 #result h1 {
   font-size: 32px;
+}
+
+.countup {
+  transition: all 1s;
 }/*# sourceMappingURL=style.css.map */

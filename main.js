@@ -1,4 +1,21 @@
 
+let countupYear = 0;
+let countupMonth = 0;
+let countupDay = 0;
+let interval;
+
+function startCountUpAnimation() {
+    interval = setInterval(function() {
+        document.querySelector('.year_span').textContent = countupYear++;
+        document.querySelector('.month_span').textContent = countupMonth++;
+        document.querySelector('.day_span').textContent = countupDay++;
+    }, 100); // Adjust the animation speed here (in milliseconds)
+}
+
+function stopCountUpAnimation() {
+    clearInterval(interval);
+}
+
 function dayValidation(dayGiven) {
     if(dayGiven.trim().length == 0){
         document.querySelector('.day_error').innerText = "This field is required";
@@ -79,9 +96,13 @@ clearValidationError()
     const ageInMonths = Math.floor(ageInMilliseconds / (30 * 24 * 60 * 60 * 1000));
     const ageInDays = Math.floor(ageInMilliseconds / (24 * 60 * 60 * 1000));
 
+
+
     document.querySelector('.year_span').innerText = ageInYears
     document.querySelector('.month_span').innerText = ageInMonths
     document.querySelector('.day_span').innerText = ageInDays
+
+    startCountUpAnimation();
     
     }    
 }
@@ -124,3 +145,5 @@ function clearValidationError() {
     document.querySelector('.month_error').innerText = "";
     document.querySelector('.day_error').innerText = "";
 }
+
+
