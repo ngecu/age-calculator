@@ -5,56 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">  
+  
   <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="full-card">
-    <div class="card">
-      <form class="form">
-        <div class="container">
-          <div class="box">
-            <label for="day">
-              Day
-            </label>
-            <input type="number" placeholder="DD" id="day">
-            <small></small>
-          </div>
-          <div class="box">
-            <label for="month">
-              Month
-            </label>
-            <input type="number" placeholder="MM" id="month">
-            <small></small>
-          </div>
-          <div class="box">
-            <label for="year">
-              Year
-            </label>
-            <input type="number" placeholder="YYYY" id="year">
-            <small></small>
-          </div>
-        </div>
-
-        <div class="submit-box">
-          <hr>
-          <button type="submit" class="submit-btn"><img src="./assets/images/icon-arrow.svg" alt="icon"></button>
-          
-        </div>
-      </form>
-      <div class="output">
-        <h1><span id="YY">--</span>years</h1>
-        <h1><span id="MM">--</span>months</h1>
-        <h1><span id="DD">--</span>days</h1>
+  <div class="container">
+    <form id="ageForm">
+      <div class="day_container">
+        <label id="day_label" for="day">DAY</label>
+        <input type="text" id="day" placeholder="DD">
+        <div id="validationError" class="day_error" style="color: red;"></div>
       </div>
+
+      <div class="month_container">
+        <label id="month_label" for="month">MONTH</label>
+        <input type="text" id="month" placeholder="MM">
+        <div id="validationError" class="month_error" style="color: red;"></div>
+      </div>
+
+      <div class="year_container">
+        <label id="year_label" for="year">YEAR</label>
+        <input type="text" id="year" placeholder="YYYY">
+        <div id="validationError" class="year_error" style="color: red;"></div>
+      </div>
+        
+      <button type="submit">
+        <img src="assets/images/icon-arrow.svg" alt="">
+      </button>
+      
+    </form>
+    <hr>
+    <div id="result">
+      <div class="year_result">
+       <h1> <span class="year_span"> -- </span> years </h1>
+      </div>
+
+      <div class="months_result">
+        <h1> <span class="month_span"> -- </span> months </h1>
+       </div>
+
+       <div class="days_result">
+        <h1> <span class="day_span"> -- </span> days </h1>
+       </div>
     </div>
-</div> 
-<script src="main.js"></script> 
+</div>
+  
+<script src="main.js"></script>
 </body>
 </html>
